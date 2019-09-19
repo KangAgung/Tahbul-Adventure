@@ -11,6 +11,7 @@ using ObjectsTags = Popcorn.Metadatas.Tags.Objects;
 using PersonsTags = Popcorn.Metadatas.Tags.Persons;
 using ElementiesTags = Popcorn.Metadatas.Tags.Elementies;
 using UIElementiesTags = Popcorn.Metadatas.Tags.UIElementies;
+using UnityEngine.SceneManagement;
 
 namespace Popcorn.GameObjects.Elementies
 {
@@ -19,8 +20,8 @@ namespace Popcorn.GameObjects.Elementies
     [RequireComponent(typeof(AudioSource))]
     public class GameBehavior : MonoBehaviour
     {
-
-        public enum GameStates { Paused, Runing, TimeOut, Ended };
+        public int noScene;
+        public enum GameStates { Paused, Runing, TimeOut, Ended, NextLvl };
 
         [SerializeField] Times.ScenesTimes scenesTime = Times.ScenesTimes.Normal;
         [SerializeField] Text timeScreen;
@@ -115,10 +116,15 @@ namespace Popcorn.GameObjects.Elementies
                         CheckTime();
                     }
                     break;
-
+                    //---------------------------------------------
                 case GameStates.Ended:
                     AudioManager.Instance.StopBackgroundMusic(caller: this);
                     GameIsOver();
+                    break;
+
+                case GameStates.NextLvl:
+                    AudioManager.Instance.StopBackgroundMusic(caller: this);
+                    SceneManager.LoadScene(noScene);
                     break;
 
                 case GameStates.TimeOut:
@@ -144,9 +150,15 @@ namespace Popcorn.GameObjects.Elementies
 
         void SetTimeInScreen() { timeScreen.text = ((int)time).ToString(); }
 
+        //------------------------------------------------------------------
         bool IsGameFinished()
         {
-            if (!player.IsAlive || endPoint.WasReachedTheEnd)
+            if (endPoint.WasReachedTheEnd)
+            {
+                GameState = GameStates.NextLvl;
+                return true;
+            }
+            if(!player.IsAlive)
             {
                 GameState = GameStates.Ended;
                 return true;

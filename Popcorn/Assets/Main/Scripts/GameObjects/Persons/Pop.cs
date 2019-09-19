@@ -51,22 +51,26 @@ namespace Popcorn.GameObjects.Persons
             }
             CleanVelocityX();
 
-            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) &&
+            if(Time.timeScale != 0.0f)
+            {
+                if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) &&
                 !leftColliderHelper.IsColliding)
-            {
-                ExecuteMove(Transforms.Direction.Left);
-            }
-            else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) &&
-                !rightColliderHelper.IsColliding)
-            {
-                ExecuteMove(Transforms.Direction.Right);
+                {
+                    ExecuteMove(Transforms.Direction.Left);
+                }
+                else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) &&
+                    !rightColliderHelper.IsColliding)
+                {
+                    ExecuteMove(Transforms.Direction.Right);
+                }
+
+                if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) &&
+                 !isJumping)
+                {
+                    ExecuteJump(jumpForce);
+                }
             }
 
-            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) &&
-             !isJumping)
-            {
-                ExecuteJump(jumpForce);
-            }
 
             animator.SetFloat(AnimationParameters.Velocity.ToString(), GetAbsRunVelocity());
             isJumping = !bottomColliderHelper.IsColliding;
@@ -143,7 +147,8 @@ namespace Popcorn.GameObjects.Persons
 
             if (isJumping) { animator.SetTrigger(AnimationParameters.WinTrigger.ToString()); }
             else { StartCoroutine(WinAnimation()); }
-        }
+        } 
+ 
 
         IEnumerator WinAnimation()
         {
