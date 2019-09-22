@@ -77,6 +77,36 @@ namespace Popcorn.GameObjects.Persons
             animator.SetBool(AnimationParameters.IsJump.ToString(), isJumping);
             CheckAliveConditions();
         }
+        public void left()
+        {
+            if (Time.timeScale != 0.0f)
+            {
+                if(!leftColliderHelper.IsColliding)
+                {
+                    ExecuteMove(Transforms.Direction.Left);
+                }
+            }
+        }
+        public void right()
+        {
+            if (Time.timeScale != 0.0f)
+            {
+                if(!rightColliderHelper.IsColliding)
+                {
+                    ExecuteMove(Transforms.Direction.Right);
+                }
+            }
+        }
+        public void jump2()
+        {
+            if (Time.timeScale != 0.0f)
+            {
+                if (!isJumping)
+                {
+                    ExecuteJump(jumpForce);
+                }
+            }
+        }
 
         void ExecuteMove(float dir)
         {
