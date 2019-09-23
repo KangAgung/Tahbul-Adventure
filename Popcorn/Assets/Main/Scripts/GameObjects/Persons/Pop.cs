@@ -29,6 +29,8 @@ namespace Popcorn.GameObjects.Persons
 
         Jump jump = new Jump();
         Move move = new Move();
+        bool jalankiri = false;
+        bool jalankanan = false;
 
         void FixedUpdate()
         {
@@ -53,12 +55,12 @@ namespace Popcorn.GameObjects.Persons
 
             if(Time.timeScale != 0.0f)
             {
-                if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) &&
+                if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow ) || (jalankiri == true)) &&
                 !leftColliderHelper.IsColliding)
                 {
                     ExecuteMove(Transforms.Direction.Left);
                 }
-                else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) &&
+                else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || (jalankanan == true)) &&
                     !rightColliderHelper.IsColliding)
                 {
                     ExecuteMove(Transforms.Direction.Right);
@@ -77,25 +79,18 @@ namespace Popcorn.GameObjects.Persons
             animator.SetBool(AnimationParameters.IsJump.ToString(), isJumping);
             CheckAliveConditions();
         }
+        public void leftrightrealese()
+        {
+            jalankiri = false;
+            jalankanan = false;
+        }
         public void left()
         {
-            if (Time.timeScale != 0.0f)
-            {
-                if(!leftColliderHelper.IsColliding)
-                {
-                    ExecuteMove(Transforms.Direction.Left);
-                }
-            }
+            jalankiri = true;
         }
         public void right()
         {
-            if (Time.timeScale != 0.0f)
-            {
-                if(!rightColliderHelper.IsColliding)
-                {
-                    ExecuteMove(Transforms.Direction.Right);
-                }
-            }
+            jalankanan = true;
         }
         public void jump2()
         {
