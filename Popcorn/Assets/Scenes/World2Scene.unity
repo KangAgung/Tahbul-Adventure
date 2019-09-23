@@ -7238,6 +7238,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114060786367433216, guid: c2560c6b468584148a774704c5cd4178,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 82c4747ae778b734389ec24042069d04,
+        type: 3}
     - target: {fileID: 224916069898429920, guid: c2560c6b468584148a774704c5cd4178,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7382,7 +7388,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1924256345}
     - target: {fileID: 223890744610078778, guid: c2560c6b468584148a774704c5cd4178,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -9241,6 +9247,12 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cce3c8c79bd98dc45851a86668500887, type: 3}
+--- !u!20 &1924256345 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20326364071060674, guid: cce3c8c79bd98dc45851a86668500887,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924256344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1945164962
 PrefabInstance:
   m_ObjectHideFlags: 0
