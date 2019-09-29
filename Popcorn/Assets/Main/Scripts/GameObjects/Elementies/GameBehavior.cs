@@ -124,7 +124,8 @@ namespace Popcorn.GameObjects.Elementies
 
                 case GameStates.NextLvl:
                     AudioManager.Instance.StopBackgroundMusic(caller: this);
-                    SceneManager.LoadScene(noScene);
+                    GameState = GameStates.Paused;
+                    StartCoroutine(CallNextScene2());
                     break;
 
                 case GameStates.TimeOut:
@@ -180,7 +181,11 @@ namespace Popcorn.GameObjects.Elementies
             yield return new WaitForSeconds(Times.Waits.Medium);
             ScenesManager.Instance.CallNextScene();
         }
-
+        IEnumerator CallNextScene2()
+        {
+            yield return new WaitForSeconds(Times.Waits.Medium);
+            SceneManager.LoadScene(noScene);
+        }
     }
 
 }

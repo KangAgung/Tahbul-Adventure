@@ -6,7 +6,8 @@
 
         public enum Names
         {
-            World1Scene1
+            World1Scene1,
+            World1Scene2
         }
 
     }
