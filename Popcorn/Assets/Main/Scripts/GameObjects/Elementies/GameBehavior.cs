@@ -20,6 +20,7 @@ namespace Popcorn.GameObjects.Elementies
     [RequireComponent(typeof(AudioSource))]
     public class GameBehavior : MonoBehaviour
     {
+        public int nextScene;
         public int noScene;
         public enum GameStates { Paused, Runing, TimeOut, Ended, NextLvl };
 
@@ -179,12 +180,13 @@ namespace Popcorn.GameObjects.Elementies
         IEnumerator CallNextScene()
         {
             yield return new WaitForSeconds(Times.Waits.Medium);
-            ScenesManager.Instance.CallNextScene();
+            SceneManager.LoadScene(noScene);
+            //ScenesManager.Instance.CallNextScene();
         }
         IEnumerator CallNextScene2()
         {
             yield return new WaitForSeconds(Times.Waits.Medium);
-            SceneManager.LoadScene(noScene);
+            SceneManager.LoadScene(nextScene);
         }
     }
 

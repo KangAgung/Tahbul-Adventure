@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     private bool CekPause;
     public GameObject pauseMenu;
-    
+    public int noScene;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,11 @@ public class PauseMenu : MonoBehaviour
     public void ToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void Rertry()
+    {
+        SceneManager.LoadScene(noScene);
     }
 
     public void Pause()
