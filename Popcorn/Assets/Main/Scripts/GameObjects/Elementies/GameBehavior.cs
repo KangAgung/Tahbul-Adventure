@@ -22,6 +22,9 @@ namespace Popcorn.GameObjects.Elementies
     {
         public int nextScene;
         public int noScene;
+        public GameObject live1;
+        public GameObject live2;
+        public GameObject live3;
         public enum GameStates { Paused, Runing, TimeOut, Ended, NextLvl };
 
         [SerializeField] Times.ScenesTimes scenesTime = Times.ScenesTimes.Normal;
@@ -101,6 +104,26 @@ namespace Popcorn.GameObjects.Elementies
         {
             AudioManager.Instance.PlayBackgroundMusic(caller: this, music: backgroundMusic);
             GameState = GameStates.Runing;
+            //------------------------------------
+            if (GameStatus.lives == 2)
+            {
+                live3.SetActive(false);
+            }
+            else if (GameStatus.lives == 1)
+            {
+                live3.SetActive(false);
+                live2.SetActive(false);
+            }
+            else if (GameStatus.lives == 0)
+            {
+                live3.SetActive(false);
+                live2.SetActive(false);
+                live1.SetActive(false);
+            }
+            else if(GameStatus.lives == -1)
+            {
+                SceneManager.LoadScene(0);
+            }
         }
 
         void Update()
@@ -181,6 +204,7 @@ namespace Popcorn.GameObjects.Elementies
         {
             yield return new WaitForSeconds(Times.Waits.Medium);
             SceneManager.LoadScene(noScene);
+            GameStatus.lives -= 1;
             //ScenesManager.Instance.CallNextScene();
         }
         IEnumerator CallNextScene2()
