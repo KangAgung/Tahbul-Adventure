@@ -151,7 +151,7 @@ namespace Popcorn.GameObjects.Persons
 
             }
             else if (otherCollider2D.gameObject.CompareTag(ObjectsTags.Hit.ToString()))
-            {  
+            {
                 Hit();
             }
         }
