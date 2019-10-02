@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameStatus : MonoBehaviour
 {
     public static int score = 0;
+    public static int score_temp = 0;
     //public static int currentLevel = 1;
     public static int lives = 3;
     // Start is called before the first frame update

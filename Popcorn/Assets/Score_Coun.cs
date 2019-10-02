@@ -22,11 +22,12 @@ public class Score_Coun : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        //if (other.gameObject.tag == "Player")
+        //if (gameObject.tag == "Player")
         //{
             Destroy(gameObject);
-            GameStatus.score += score;
-            scoreLabel.text = GameStatus.score.ToString();
+            GameStatus.score_temp += score;
+            GameStatus.score_temp += GameStatus.score;
+            scoreLabel.text = GameStatus.score_temp.ToString();
         //}
     }
 }

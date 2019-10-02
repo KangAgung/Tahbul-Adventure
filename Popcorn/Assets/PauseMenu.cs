@@ -33,6 +33,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Rertry()
     {
+        GameStatus.lives = GameStatus.lives - 1;
         SceneManager.LoadScene(noScene);
     }
 

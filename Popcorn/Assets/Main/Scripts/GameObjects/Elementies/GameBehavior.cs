@@ -124,6 +124,7 @@ namespace Popcorn.GameObjects.Elementies
             {
                 SceneManager.LoadScene(0);
             }
+            GameStatus.score_temp = 0;
         }
 
         void Update()
@@ -211,6 +212,7 @@ namespace Popcorn.GameObjects.Elementies
         {
             yield return new WaitForSeconds(Times.Waits.Medium);
             SceneManager.LoadScene(nextScene);
+            GameStatus.score = GameStatus.score_temp;
         }
     }
 
