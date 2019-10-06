@@ -116,13 +116,7 @@ namespace Popcorn.GameObjects.Elementies
             }
             else if (GameStatus.lives == 0)
             {
-                live3.SetActive(false);
-                live2.SetActive(false);
-                live1.SetActive(false);
-            }
-            else if(GameStatus.lives == -1)
-            {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(3);
             }
             GameStatus.score_temp = 0;
         }

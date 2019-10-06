@@ -22,7 +22,7 @@ public class Score_Coun : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        //if (gameObject.tag == "Player")
+        //if(other.gameObject.tag == "Player")
         //{
             Destroy(gameObject);
             GameStatus.score_temp += score;
