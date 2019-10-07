@@ -116,14 +116,9 @@ namespace Popcorn.GameObjects.Elementies
             }
             else if (GameStatus.lives == 0)
             {
-                live3.SetActive(false);
-                live2.SetActive(false);
-                live1.SetActive(false);
+                SceneManager.LoadScene(3);
             }
-            else if(GameStatus.lives == -1)
-            {
-                SceneManager.LoadScene(0);
-            }
+            GameStatus.score_temp = 0;
         }
 
         void Update()
@@ -211,6 +206,7 @@ namespace Popcorn.GameObjects.Elementies
         {
             yield return new WaitForSeconds(Times.Waits.Medium);
             SceneManager.LoadScene(nextScene);
+            GameStatus.score = GameStatus.score_temp;
         }
     }
 

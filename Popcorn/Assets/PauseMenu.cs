@@ -8,13 +8,18 @@ public class PauseMenu : MonoBehaviour
     private bool CekPause;
     public GameObject pauseMenu;
     public int noScene;
-
+    public GameObject GameOverMenu;
     // Start is called before the first frame update
     void Start()
     {
         CekPause = false;
         Time.timeScale = 1.0f;
         pauseMenu.SetActive(false);
+        GameOverMenu.SetActive(false);
+        if (GameStatus.lives == 0)
+        {
+            GameOverMenu.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -24,7 +29,10 @@ public class PauseMenu : MonoBehaviour
         {
             Pause();
         }
-
+        if (GameStatus.lives == 0)
+        {
+            GameOverMenu.SetActive(true);
+        }
     }
     public void ToMainMenu()
     {
@@ -33,6 +41,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Rertry()
     {
+        GameStatus.lives = GameStatus.lives - 1;
         SceneManager.LoadScene(noScene);
     }
 

@@ -27,10 +27,14 @@ namespace Popcorn.GameObjects.Persons
         bool isJumping = false;
         float lastDir = Transforms.Direction.Right;
 
+
         Jump jump = new Jump();
         Move move = new Move();
         bool jalankiri = false;
         bool jalankanan = false;
+
+        //public float mass;
+        //public Rigidbody rb;
 
         void FixedUpdate()
         {
@@ -71,9 +75,18 @@ namespace Popcorn.GameObjects.Persons
                 {
                     ExecuteJump(jumpForce);
                 }
+                if((Input.GetKeyDown(KeyCode.DownArrow) || (Input.GetKey(KeyCode.S))) && isJumping)
+                {
+                    rb = GetComponent<Rigidbody2D>();
+                    rb.gravityScale = 25.0f;
+                    //Rigidbody.Mass = 50.5F;
+                }
+                if (!isJumping)
+                {
+                    rb.gravityScale = 1.5f;
+                }
             }
-
-
+            
             animator.SetFloat(AnimationParameters.Velocity.ToString(), GetAbsRunVelocity());
             isJumping = !bottomColliderHelper.IsColliding;
             animator.SetBool(AnimationParameters.IsJump.ToString(), isJumping);
@@ -102,7 +115,17 @@ namespace Popcorn.GameObjects.Persons
                 }
             }
         }
-
+        public void Down()
+        {
+            if (Time.timeScale != 0.0f)
+            {
+                if (isJumping)
+                {
+                    rb = GetComponent<Rigidbody2D>();
+                    rb.gravityScale = 25.0f;
+                }
+            }
+        }
         void ExecuteMove(float dir)
         {
             move.Execute(rb, velocity * dir);
@@ -200,6 +223,7 @@ namespace Popcorn.GameObjects.Persons
             yield return new WaitForSeconds(Times.Waits.Minimun);
             AudioManager.Instance.PlaySoundOnce(caller: this, sound: deathAudioSource);
             rb.gravityScale = Transforms.Gravity.Hard;
+            rb.gravityScale = 1.5f;
             jump.Execute(rb, forceToUp);
             (Getter.Component(this, gameObject, typeof(Collider2D)) as Collider2D).isTrigger = true;
 
