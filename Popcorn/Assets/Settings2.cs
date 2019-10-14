@@ -44,11 +44,13 @@ public class Settings2 : MonoBehaviour
     public void SetVolumeBGM(float volume)
     {
         AudioMixer.SetFloat("BGM", volume);
+        GameStatus.SliderBGM = volume;
     }
 
     public void SetVolumeSFX(float volume)
     {
         AudioMixer.SetFloat("SFX", volume);
+        GameStatus.SliderSFX = volume;
     }
 
     public void SetResolution(int resolutionIndex)
@@ -72,7 +74,8 @@ public class Settings2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //AudioMixer.SetFloat("BGM", GameStatus.SliderBGM);
+        //AudioMixer.SetFloat("SFX", GameStatus.SliderSFX);
     }
 }
 
