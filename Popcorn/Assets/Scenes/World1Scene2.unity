@@ -612,6 +612,16 @@ PrefabInstance:
       propertyPath: canJump
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -633,6 +643,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.050421476
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0715071
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6510856
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1001 &118550378
@@ -962,7 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &127644176
 BoxCollider2D:
@@ -1138,7 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &179333929
 BoxCollider2D:
@@ -2437,12 +2462,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.680707, y: 1.8092699}
   m_EdgeRadius: 0
---- !u!4 &397219415 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1143674689}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &400223775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3539,7 +3558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &539061160
 BoxCollider2D:
@@ -3882,6 +3901,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -3903,6 +3932,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.040842056
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6702442
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1001 &580088810
@@ -4217,7 +4261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &617732286
 BoxCollider2D:
@@ -4433,6 +4477,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -4454,6 +4508,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03445697
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6574714
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1001 &674350110
@@ -4541,6 +4610,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -4562,6 +4641,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03767407
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.036378384
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6542169
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1 &693295406
@@ -4694,7 +4788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &693830396
 BoxCollider2D:
@@ -5367,7 +5461,6 @@ Transform:
   - {fileID: 2036039567}
   - {fileID: 9453939}
   - {fileID: 975460784}
-  - {fileID: 397219415}
   - {fileID: 1836441815}
   - {fileID: 1147807058}
   m_Father: {fileID: 812717953}
@@ -5832,7 +5925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &882958310
 BoxCollider2D:
@@ -6222,7 +6315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &937734616
 BoxCollider2D:
@@ -6742,6 +6835,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -6763,6 +6866,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.04084277
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6510856
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1 &964618282
@@ -7084,7 +7202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
       propertyPath: m_LocalScale.x
@@ -7128,6 +7246,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -7149,6 +7277,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.034488678
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.65740585
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1 &994726175
@@ -8142,7 +8285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &1132617220
 BoxCollider2D:
@@ -8310,114 +8453,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b96d04a560d889f48a51e23d2a03c580, type: 3}
---- !u!1001 &1143674689
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 757208891}
-    m_Modifications:
-    - target: {fileID: 1903165509283744, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_Name
-      value: ZombiePop (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 144.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.10333997
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.9803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.9803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.9803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: StartPostionToLeft
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: IsWalking
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: startPostionToLeft
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: isWalking
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: timeToWalk
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: velocity
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0128848255
-      objectReference: {fileID: 0}
-    - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.283931
-      objectReference: {fileID: 0}
-    - target: {fileID: 82579904595870908, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243265580307622246, guid: f657215c8434adf439e72d040d7bc982,
-        type: 2}
-    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!4 &1147807058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d,
@@ -8509,6 +8544,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -8530,6 +8575,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.02810669
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.66378784
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1 &1170194392
@@ -8985,7 +9045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &1245911723
 BoxCollider2D:
@@ -9254,6 +9314,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -9275,6 +9345,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03719753
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.038550735
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6655565
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1 &1264063429 stripped
@@ -10159,7 +10244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &1340445310
 BoxCollider2D:
@@ -10461,7 +10546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4877594221063240, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
       propertyPath: m_LocalScale.x
@@ -10505,6 +10590,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -10526,6 +10621,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0536232
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.65740585
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1001 &1466226812
@@ -10710,7 +10820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &1490408864
 BoxCollider2D:
@@ -10871,6 +10981,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -10892,6 +11012,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.048223495
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.65208244
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!4 &1501216692 stripped
@@ -12105,7 +12240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &1668088190
 BoxCollider2D:
@@ -12266,6 +12401,16 @@ PrefabInstance:
       propertyPath: velocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 306252839}
+    - target: {fileID: 114448790804289570, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 61986439269702844, guid: b882127b87ea2a343be8ccd363e5d74d,
         type: 3}
       propertyPath: m_Offset.x
@@ -12287,6 +12432,21 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: c780452038f45bd43a5d7ef7648d47c1, type: 2}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03767395
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 58684380821392838, guid: b882127b87ea2a343be8ccd363e5d74d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6542206
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b882127b87ea2a343be8ccd363e5d74d, type: 3}
 --- !u!1 &1674501919
@@ -13441,7 +13601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &1929046419
 BoxCollider2D:
@@ -13859,7 +14019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &2047126347
 BoxCollider2D:
@@ -14072,7 +14232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &2058824872
 BoxCollider2D:
@@ -14438,7 +14598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44934940ffe8e2146b441b121b099846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 500
   scoreLabel: {fileID: 306252839}
 --- !u!61 &2112994854
 BoxCollider2D:

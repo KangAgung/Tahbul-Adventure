@@ -26,7 +26,7 @@ public class Score_Coun : MonoBehaviour
         //{
             Destroy(gameObject);
             GameStatus.score_temp += score;
-            GameStatus.score_temp += GameStatus.score;
+            //GameStatus.score_temp += GameStatus.score;
             scoreLabel.text = GameStatus.score_temp.ToString();
         //}
     }
