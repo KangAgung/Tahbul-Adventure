@@ -200,6 +200,7 @@ namespace Popcorn.GameObjects.Elementies
             yield return new WaitForSeconds(Times.Waits.Medium);
             SceneManager.LoadScene(noScene);
             GameStatus.lives -= 1;
+            GameStatus.score_temp = GameStatus.score;
             //ScenesManager.Instance.CallNextScene();
         }
         IEnumerator CallNextScene2()
