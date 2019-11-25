@@ -23,6 +23,9 @@ namespace Popcorn.Managers
                     nextSceneName = ScenesNames.World1Scene2;
                     //SceneManager.LoadScene(2);
                     break;
+                case ScenesNames.World1Scene3:
+                    nextSceneName = ScenesNames.World1Scene3;
+                    break;
                 default:
                     nextSceneName = ScenesNames.World1Scene1;
                     break;
