@@ -118,7 +118,7 @@ namespace Popcorn.GameObjects.Elementies
             {
                 SceneManager.LoadScene(3);
             }
-            GameStatus.score_temp = 0;
+            //GameStatus.score_temp = 0;
         }
 
         void Update()
@@ -200,13 +200,16 @@ namespace Popcorn.GameObjects.Elementies
             yield return new WaitForSeconds(Times.Waits.Medium);
             SceneManager.LoadScene(noScene);
             GameStatus.lives -= 1;
+            GameStatus.score_temp = GameStatus.score;
             //ScenesManager.Instance.CallNextScene();
         }
         IEnumerator CallNextScene2()
         {
             yield return new WaitForSeconds(Times.Waits.Medium);
             SceneManager.LoadScene(nextScene);
+            GameStatus.score_temp += (int)time * 50;
             GameStatus.score = GameStatus.score_temp;
+            //GameStatus.score_temp = 0;
         }
     }
 
