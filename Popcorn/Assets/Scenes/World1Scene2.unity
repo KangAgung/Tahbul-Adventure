@@ -11527,6 +11527,22 @@ PrefabInstance:
       propertyPath: velocity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 212448063470145394, guid: 6297869e5a2a64e429a6c3fcc00f5dbd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c9e6b4bdfe8d68144b7e1ed8d69f9e7c,
+        type: 3}
+    - target: {fileID: 212448063470145394, guid: 6297869e5a2a64e429a6c3fcc00f5dbd,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 212448063470145394, guid: 6297869e5a2a64e429a6c3fcc00f5dbd,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6297869e5a2a64e429a6c3fcc00f5dbd, type: 3}
 --- !u!114 &1564009255 stripped
