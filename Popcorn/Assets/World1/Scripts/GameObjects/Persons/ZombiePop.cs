@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Popcorn.Bases;
 using System.Collections;
+using UnityEngine.UI;
 using Popcorn.Managers;
 using Popcorn.Metadatas;
 using Popcorn.ObjectsServices;
@@ -25,6 +26,8 @@ namespace Popcorn.GameObjects.Persons
         [SerializeField] bool startPostionToLeft = true;
         [SerializeField] float timeToWalk = 1f;
         [SerializeField] float jumpForce = 900f;
+        public int score = 0;
+        public Text scoreLabel;
 
         Jump jump = new Jump();
         bool isJumping = false;
@@ -43,6 +46,7 @@ namespace Popcorn.GameObjects.Persons
 
         void Start()
         {
+            scoreLabel.text = GameStatus.score.ToString();
             if (startPostionToLeft)
             {
                 direction = Transforms.Direction.Left;
@@ -161,6 +165,9 @@ namespace Popcorn.GameObjects.Persons
             if (IsAlive)
             {
                 IsAlive = false;
+                GameStatus.score_temp += score;
+                //GameStatus.score_temp += GameStatus.score;
+                scoreLabel.text = GameStatus.score_temp.ToString();
                 KillAnimation();
             }
         }
