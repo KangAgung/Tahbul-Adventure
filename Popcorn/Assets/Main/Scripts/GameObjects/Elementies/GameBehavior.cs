@@ -116,7 +116,7 @@ namespace Popcorn.GameObjects.Elementies
             }
             else if (GameStatus.lives == 0)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(4);
             }
             //GameStatus.score_temp = 0;
         }
