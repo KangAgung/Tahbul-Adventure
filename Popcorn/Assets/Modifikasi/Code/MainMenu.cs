@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
     }
     public void openPlaylvl3()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
     public void openPlaylvl4()
     {
