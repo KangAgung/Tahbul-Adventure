@@ -27,8 +27,14 @@ namespace Popcorn.GameObjects.Persons
         bool isJumping = false;
         float lastDir = Transforms.Direction.Right;
 
+
         Jump jump = new Jump();
         Move move = new Move();
+        bool jalankiri = false;
+        bool jalankanan = false;
+
+        //public float mass;
+        //public Rigidbody rb;
 
         void FixedUpdate()
         {
@@ -51,29 +57,75 @@ namespace Popcorn.GameObjects.Persons
             }
             CleanVelocityX();
 
-            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) &&
+            if(Time.timeScale != 0.0f)
+            {
+                if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow ) || (jalankiri == true)) &&
                 !leftColliderHelper.IsColliding)
-            {
-                ExecuteMove(Transforms.Direction.Left);
-            }
-            else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) &&
-                !rightColliderHelper.IsColliding)
-            {
-                ExecuteMove(Transforms.Direction.Right);
-            }
+                {
+                    ExecuteMove(Transforms.Direction.Left);
+                }
+                else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || (jalankanan == true)) &&
+                    !rightColliderHelper.IsColliding)
+                {
+                    ExecuteMove(Transforms.Direction.Right);
+                }
 
-            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) &&
-             !isJumping)
-            {
-                ExecuteJump(jumpForce);
+                if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) &&
+                 !isJumping)
+                {
+                    ExecuteJump(jumpForce);
+                }
+                if((Input.GetKeyDown(KeyCode.DownArrow) || (Input.GetKey(KeyCode.S))) && isJumping)
+                {
+                    rb = GetComponent<Rigidbody2D>();
+                    rb.gravityScale = 25.0f;
+                    //Rigidbody.Mass = 50.5F;
+                }
+                if (!isJumping)
+                {
+                    rb.gravityScale = 1.5f;
+                }
             }
-
+            
             animator.SetFloat(AnimationParameters.Velocity.ToString(), GetAbsRunVelocity());
             isJumping = !bottomColliderHelper.IsColliding;
             animator.SetBool(AnimationParameters.IsJump.ToString(), isJumping);
             CheckAliveConditions();
         }
-
+        public void leftrightrealese()
+        {
+            jalankiri = false;
+            jalankanan = false;
+        }
+        public void left()
+        {
+            jalankiri = true;
+        }
+        public void right()
+        {
+            jalankanan = true;
+        }
+        public void jump2()
+        {
+            if (Time.timeScale != 0.0f)
+            {
+                if (!isJumping)
+                {
+                    ExecuteJump(jumpForce);
+                }
+            }
+        }
+        public void Down()
+        {
+            if (Time.timeScale != 0.0f)
+            {
+                if (isJumping)
+                {
+                    rb = GetComponent<Rigidbody2D>();
+                    rb.gravityScale = 25.0f;
+                }
+            }
+        }
         void ExecuteMove(float dir)
         {
             move.Execute(rb, velocity * dir);
@@ -122,7 +174,7 @@ namespace Popcorn.GameObjects.Persons
 
             }
             else if (otherCollider2D.gameObject.CompareTag(ObjectsTags.Hit.ToString()))
-            {
+            {  
                 Hit();
             }
         }
@@ -143,7 +195,8 @@ namespace Popcorn.GameObjects.Persons
 
             if (isJumping) { animator.SetTrigger(AnimationParameters.WinTrigger.ToString()); }
             else { StartCoroutine(WinAnimation()); }
-        }
+        } 
+ 
 
         IEnumerator WinAnimation()
         {
@@ -170,6 +223,7 @@ namespace Popcorn.GameObjects.Persons
             yield return new WaitForSeconds(Times.Waits.Minimun);
             AudioManager.Instance.PlaySoundOnce(caller: this, sound: deathAudioSource);
             rb.gravityScale = Transforms.Gravity.Hard;
+            rb.gravityScale = 1.5f;
             jump.Execute(rb, forceToUp);
             (Getter.Component(this, gameObject, typeof(Collider2D)) as Collider2D).isTrigger = true;
 

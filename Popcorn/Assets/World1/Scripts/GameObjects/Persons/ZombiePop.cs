@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using Popcorn.Bases;
+using System.Collections;
+using UnityEngine.UI;
 using Popcorn.Managers;
 using Popcorn.Metadatas;
 using Popcorn.ObjectsServices;
@@ -12,16 +14,23 @@ namespace Popcorn.GameObjects.Persons
 {
 
     [RequireComponent(typeof(AudioSource))]
+    //public boolean jump;
+
     public class ZombiePop : EnemyBase
     {
 
         enum AnimationParameters { WalkTrigger };
-
+        [SerializeField] bool canJump = false;
         [SerializeField] float velocity = 1.2f;
         [SerializeField] bool isWalking = false;
         [SerializeField] bool startPostionToLeft = true;
         [SerializeField] float timeToWalk = 1f;
+        [SerializeField] float jumpForce = 900f;
+        public int score = 0;
+        public Text scoreLabel;
 
+        Jump jump = new Jump();
+        bool isJumping = false;
         float direction = Transforms.Direction.Right;
         float walkClock = 0;
 
@@ -37,6 +46,7 @@ namespace Popcorn.GameObjects.Persons
 
         void Start()
         {
+            scoreLabel.text = GameStatus.score.ToString();
             if (startPostionToLeft)
             {
                 direction = Transforms.Direction.Left;
@@ -66,6 +76,26 @@ namespace Popcorn.GameObjects.Persons
             }
 
             if (isWalking) { Walk(); }
+            if (canJump && !isJumping) {
+                ExecuteJump(jumpForce);
+                isJumping = true;
+                isWalking = false;
+                StartCoroutine(waitJump(2.0f));
+            }
+        }
+
+        IEnumerator waitJump(float waitTime)
+        {
+            yield return new WaitForSeconds(waitTime);
+            isJumping = false;
+            isWalking = true;
+            //animator.SetBool(AnimationParameters.Hit.ToString(), false);
+        }
+        void ExecuteJump(float force)
+        {
+            jump.Execute(rb, force);
+            //AudioManager.Instance.PlaySoundOnce(caller: this, sound: jumpAudioSource);
+            //timeInStandBy = 0;
         }
 
         void Walk()
@@ -135,6 +165,9 @@ namespace Popcorn.GameObjects.Persons
             if (IsAlive)
             {
                 IsAlive = false;
+                GameStatus.score_temp += score;
+                //GameStatus.score_temp += GameStatus.score;
+                scoreLabel.text = GameStatus.score_temp.ToString();
                 KillAnimation();
             }
         }
